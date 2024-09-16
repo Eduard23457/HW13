@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
     private String bookName;
     private Author author;
@@ -24,39 +26,30 @@ public class Book {
     public void setBookAge(int i) {
     }
 
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return bookName.equals(book.bookName) && author.equals(book.author) && bookAge == book.bookAge;
-
-    }
-
-    @Override
-    public int hashCode() {
-        return java.util.Objects.hash(bookName);
-    }
-
-    public String getbookName() {
-        return bookName;
-    }
-
-    public int getbookAge() {
-        return bookAge;
-    }
-
-    public Author getauthor() {
-        return author;
-    }
-
-    public void setbookAge(int bookAge) {
+    public void setookAge(int bookAge) {
         this.bookAge = bookAge;
     }
 
     @Override
     public String toString() {
-        return "Книга: " + this.getbookName() + ", автор: " + this.getauthor() + ", год:" + this.getbookAge();
+        return "Book{" +
+                "bookName='" + bookName + '\'' +
+                ", author=" + author +
+                ", bookAge=" + bookAge +
+                '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return bookAge == book.bookAge && Objects.equals(bookName, book.bookName) && Objects.equals(author, book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookName, author, bookAge);
+    }
 }
 

@@ -7,6 +7,10 @@ public class Main {
         System.out.println("Название книги " + one.getBookName() + ". Автор " + bookOne.getFirstName() + " " + one.getAuthor().getLastName() + ", год: " + one.getBookAge());
         System.out.println("Название книги " + two.getBookName() + ". Автор " + bookTwo.getFirstName() + " " + two.getAuthor().getLastName() + ", год: " + two.getBookAge());
         System.out.println("Название книги " + two.getBookName() + ". Автор" + bookTwo.getFirstName() + " " + two.getAuthor().getLastName() + ", год: " + two.getBookAge());
+        System.out.println(bookOne);
+        System.out.println(bookTwo);
+        System.out.println(bookOne.hashCode());
+        System.out.println(bookTwo.hashCode());
     }
 }
 
