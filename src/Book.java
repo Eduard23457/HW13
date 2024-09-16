@@ -23,7 +23,7 @@ public class Book {
         return author;
     }
 
-    public void setBookAge(int i) {
+    public void setBookAge() {
     }
 
     public void setookAge(int bookAge) {
