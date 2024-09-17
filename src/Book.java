@@ -23,10 +23,8 @@ public class Book {
         return author;
     }
 
-    public void setBookAge() {
-    }
 
-    public void setookAge(int bookAge) {
+    public void setBookAge(int bookAge) {
         this.bookAge = bookAge;
     }
 
