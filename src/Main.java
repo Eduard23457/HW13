@@ -11,7 +11,7 @@ public class Main {
         System.out.println(bookTwo);
         System.out.println(bookOne.hashCode());
         System.out.println(bookTwo.hashCode());
-Author author1 = new Author("Александр", "Пушкин");
+        Author author1 = new Author("Александр", "Пушкин");
         System.out.println(" == : " + (author1 == author1));
         System.out.println(" .equals() : " + (author1.equals(author1)));
     }
